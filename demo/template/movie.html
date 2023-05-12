@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+  <div class="row" style="padding-top:20px;">
+    {% for i in a %}
+    <div class="col-md-3">
+      <div class="card" style="width: 16rem;">
+        <img class="card-img-top" src="{{i.image.url}}" style="height: 200px;width:auto" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{% url 'demo_app:detail' i.id %}">{{i.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
+
+<!-- {{i.year}}
+{{i.discription}} -->

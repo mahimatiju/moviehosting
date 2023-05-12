@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<h1>ADD MOVIES</h1>
+<form action="w" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>name</label>
+    <input type="text" name="name" placeholder="enter name">
+    <input type="file" name="image"><br><br>
+
+    <label>year</label>
+    <input type="text" name="year" placeholder="enter year">
+
+    <label>discribtion</label>
+    <textarea name="details"></textarea><br><br>
+    <input type="submit" value="add">
+
+
+</form>
+
+
+
+
+
+</html>
